@@ -72,6 +72,8 @@ namespace Dados
             string resp = "";
             SqlConnection sqlCon = new SqlConnection();
 
+            //Danilo viado
+
             try
             {
                 sqlCon.ConnectionString = conexao.cn;
