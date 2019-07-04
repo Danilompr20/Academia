@@ -27,8 +27,9 @@ namespace Negocio
             obj.ClienteFoto = clienteFoto;
             obj.ClientePeso = clientePeso;
             obj.ClienteALtura = clienteALtura;
-            obj.Laudo = laudo;
             obj.AulaId = aulaId;
+            obj.Laudo = laudo;
+           
             return obj.Inserir(obj);
         }
 
@@ -52,8 +53,9 @@ namespace Negocio
                 obj.ClienteFoto = clienteFoto;
                 obj.ClientePeso = clientePeso;
                 obj.ClienteALtura = clienteALtura;
-                obj.Laudo = laudo;
-                obj.AulaId = aulaId;
+            obj.AulaId = aulaId;
+            obj.Laudo = laudo;
+              
             return obj.Editar(obj);
             }
 
