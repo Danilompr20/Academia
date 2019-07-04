@@ -9,7 +9,7 @@ namespace Dados
 {
     public class conexao
     {
-        public static string cn = "Data Source = wk-071; Initial Catalog = db_NossoStudio;Integrated Security = true";
+        public static string cn = "Data Source = WK-068; Initial Catalog = db_NossoStudio; Integrated Security = True";
 
        
        

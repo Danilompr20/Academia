@@ -241,20 +241,20 @@ namespace ClassLibrary1
 
         private void DataLista_DoubleClick(object sender, EventArgs e)
         {
-            this.txtCodigo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteId"].Value);
-            this.txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteNome"].Value);
-            this.txtData.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteDataNasc"].Value);
-            this.txtCpf.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteCPF"].Value);
-            this.txtRg.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["rg"].Value);
-            this.txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteEndereco"].Value);
+            this.txtCodigo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[1].Value);
+            this.txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[2].Value);
+            this.txtData.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[3].Value);
+            this.txtCpf.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[4].Value);
+            this.txtRg.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[5].Value);
+            this.txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[6].Value);
 
-            this.txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteTelfone"].Value);
-            this.txtContato.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteontato"].Value);
-            this.txtFoto.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteFoto"].Value);
-            this.txtPeso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clientePeso"].Value);
-            this.txtAltura.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteALtura"].Value);
-            this.txtLaudo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["laudo"].Value);
-            this.txtAula.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["aulaId"].Value);
+            this.txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[7].Value);
+            this.txtContato.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[8].Value);
+            this.txtFoto.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[9].Value);
+            this.txtPeso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[10].Value);
+            this.txtAltura.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[11].Value);
+            this.txtLaudo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[12].Value);
+            this.txtAula.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[13].Value);
             this.tabControl1.SelectedIndex = 1;
         }
 
