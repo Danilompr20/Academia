@@ -225,10 +225,10 @@ namespace Dados
                 SqlParameter parDataNasc = new SqlParameter();
                 parDataNasc.ParameterName = "@dataNascimento";
                 parDataNasc.SqlDbType = SqlDbType.Date;
-               
+
                 parDataNasc.Value = cliente.ClienteDataNasc;
                 sqlcmd.Parameters.Add(parDataNasc);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
                 SqlParameter parcpf = new SqlParameter();
                 parcpf.ParameterName = "@cpf";
@@ -242,7 +242,7 @@ namespace Dados
                 parg.SqlDbType = SqlDbType.Float;
                 parg.Value = cliente.Rg;
                 sqlcmd.Parameters.Add(parg);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
                 SqlParameter parEndereco = new SqlParameter();
                 parEndereco.ParameterName = "@endereco";
@@ -250,7 +250,7 @@ namespace Dados
                 parEndereco.Size = 100;
                 parEndereco.Value = cliente.ClienteEndereco;
                 sqlcmd.Parameters.Add(parEndereco);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
 
                 SqlParameter parTelefone = new SqlParameter();
@@ -259,7 +259,7 @@ namespace Dados
                 parTelefone.Size = 20;
                 parTelefone.Value = cliente.ClienteTelfone;
                 sqlcmd.Parameters.Add(parTelefone);
-             //   sqlcmd.Parameters.Clear();
+                //   sqlcmd.Parameters.Clear();
 
                 SqlParameter parContato = new SqlParameter();
                 parContato.ParameterName = "@contatoEmergencia";
@@ -274,14 +274,14 @@ namespace Dados
                 parFoto.SqlDbType = SqlDbType.Image;
                 parFoto.Value = cliente.ClienteFoto;
                 sqlcmd.Parameters.Add(parFoto);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
                 SqlParameter parAltura = new SqlParameter();
                 parAltura.ParameterName = "@altura";
                 parAltura.SqlDbType = SqlDbType.Float;
                 parAltura.Value = cliente.ClienteALtura;
                 sqlcmd.Parameters.Add(parAltura);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
 
 
@@ -290,7 +290,7 @@ namespace Dados
                 parPeso.SqlDbType = SqlDbType.Float;
                 parPeso.Value = cliente.ClientePeso;
                 sqlcmd.Parameters.Add(parPeso);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
 
                 SqlParameter parAula = new SqlParameter();
@@ -298,7 +298,7 @@ namespace Dados
                 parAula.SqlDbType = SqlDbType.Int;
                 parAula.Value = cliente.AulaId;
                 sqlcmd.Parameters.Add(parAula);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
 
                 SqlParameter parLaudo = new SqlParameter();
                 parLaudo.ParameterName = "@laudoMedico";
@@ -306,7 +306,7 @@ namespace Dados
                 parLaudo.Size = 100;
                 parLaudo.Value = cliente.Laudo;
                 sqlcmd.Parameters.Add(parLaudo);
-               // sqlcmd.Parameters.Clear();
+                // sqlcmd.Parameters.Clear();
                 resp = sqlcmd.ExecuteNonQuery() == 1 ? "Ok" : "Exclusão não foi feita";
 
             }
@@ -332,7 +332,7 @@ namespace Dados
                 sqlcmd.Connection = sqlCon;
                 sqlcmd.CommandText = "excluir_cliente";
                 sqlcmd.CommandType = CommandType.StoredProcedure;
-                
+
                 //sqlcmd.Parameters.Clear();
 
                 SqlParameter parIdCliente = new SqlParameter();
@@ -356,11 +356,11 @@ namespace Dados
         }
 
 
-            public DataTable BuscarNome(DClientes cliente)
-            {
-                DataTable dtresultado = new DataTable("cliente");
-                SqlConnection sqlCon = new SqlConnection();
-            
+        public DataTable BuscarNome(DClientes cliente)
+        {
+            DataTable dtresultado = new DataTable("cliente");
+            SqlConnection sqlCon = new SqlConnection();
+
             try
             {
                 sqlCon.ConnectionString = conexao.cn;
@@ -368,13 +368,13 @@ namespace Dados
                 sqlcmd.Connection = sqlCon;
                 sqlcmd.CommandText = "buscar_nome";
                 sqlcmd.CommandType = CommandType.StoredProcedure;
-               
+
 
                 SqlParameter parBuscar = new SqlParameter();
                 parBuscar.ParameterName = "@textobuscar";
                 parBuscar.SqlDbType = SqlDbType.VarChar;
                 parBuscar.Size = 50;
-                parBuscar.Value =cliente.Textobuscar;
+                parBuscar.Value = cliente.Textobuscar;
                 sqlcmd.Parameters.Add(parBuscar);
                 SqlDataAdapter sqldat = new SqlDataAdapter(sqlcmd);
                 sqldat.Fill(dtresultado);
@@ -386,8 +386,8 @@ namespace Dados
             }
             return dtresultado;
         }
-            public DataTable Mostrar()
-            {
+        public DataTable Mostrar()
+        {
             DataTable dtresultado = new DataTable("cliente");
             SqlConnection sqlCon = new SqlConnection();
 
@@ -408,6 +408,6 @@ namespace Dados
             }
             return dtresultado;
         }
-        
+
     }
 }
