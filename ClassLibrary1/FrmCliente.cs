@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using  Negocio;
 
 
+
 namespace ClassLibrary1
 {
     public partial class FrmCliente : Form
@@ -154,7 +155,7 @@ namespace ClassLibrary1
             this.HabilitaBotoes();
             this.limpar();
             this.Habilitar(true);
-            //this.txtCodigo.Enabled = false;
+            this.txtCodigo.Enabled = false;
 
         }
 
@@ -189,11 +190,12 @@ namespace ClassLibrary1
                     else
                     {
                         resp = NCliente.Editar(Convert.ToInt32(txtCodigo.Text), 
-                            this.txtNome.Text,Convert.ToDateTime(txtData.Text), Convert.ToInt32(txtCpf.Text), 
+                            txtNome.Text,Convert.ToDateTime(txtData.Text), Convert.ToInt32(txtCpf.Text), 
                             Convert.ToInt32(txtRg.Text), txtEndereco.Text, txtTelefone.Text,
                            txtContato.Text, txtFoto.Text,
                            Convert.ToDouble(txtPeso.Text), 
-                           Convert.ToDouble(txtAltura.Text), Convert.ToInt32(txtAula.Text), 
+                           Convert.ToDouble(txtAltura.Text), 
+                           Convert.ToInt32(txtAula.Text), 
                            txtLaudo.Text);
                     }
 
@@ -241,21 +243,21 @@ namespace ClassLibrary1
 
         private void DataLista_DoubleClick(object sender, EventArgs e)
         {
-            this.txtCodigo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteId"].Value);
-            this.txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteNome"].Value);
-            this.txtData.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteDataNasc"].Value);
-            this.txtCpf.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteCPF"].Value);
-            this.txtRg.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["rg"].Value);
-            this.txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteEndereco"].Value);
-
-            this.txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteTelfone"].Value);
-            this.txtContato.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteontato"].Value);
-            this.txtFoto.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteFoto"].Value);
-            this.txtPeso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clientePeso"].Value);
-            this.txtAltura.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["clienteALtura"].Value);
-            this.txtLaudo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["laudo"].Value);
-            this.txtAula.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["aulaId"].Value);
-            this.tabControl1.SelectedIndex = 1;
+            txtCodigo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[1].Value);
+            txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[2].Value);
+            txtData.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[3].Value);
+            txtCpf.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[4].Value);
+            txtRg.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[5].Value);
+            txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[6].Value);
+            txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[7].Value);
+            txtContato.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[8].Value);
+            txtFoto.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[9].Value);
+            txtPeso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[10].Value);
+            txtAltura.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[11].Value);
+            
+            txtAula.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[12].Value);
+            txtLaudo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells[13].Value);
+            tabControl1.SelectedIndex = 1;
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)

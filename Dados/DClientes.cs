@@ -72,7 +72,7 @@ namespace Dados
             string resp = "";
             SqlConnection sqlCon = new SqlConnection();
 
-            //Danilo viado
+       
 
             try
             {
@@ -273,7 +273,7 @@ namespace Dados
 
                 SqlParameter parFoto = new SqlParameter();
                 parFoto.ParameterName = "@clienteFoto";
-                parFoto.SqlDbType = SqlDbType.Image;
+                parFoto.SqlDbType = SqlDbType.Text;
                 parFoto.Value = cliente.ClienteFoto;
                 sqlcmd.Parameters.Add(parFoto);
                 // sqlcmd.Parameters.Clear();
